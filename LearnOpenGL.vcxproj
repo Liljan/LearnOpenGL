@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3AE0AEF8-8F7C-45C7-B449-7D0533F71BFD}</ProjectGuid>
+    <ProjectGuid>{A4B0C51B-9EA9-461E-B8F8-8B6363BEC667}</ProjectGuid>
     <RootNamespace>LearnOpenGL</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
