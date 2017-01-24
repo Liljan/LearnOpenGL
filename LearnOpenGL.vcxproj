@@ -146,6 +146,7 @@
     <ClCompile Include="src\ShadersMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
