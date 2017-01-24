@@ -146,13 +146,27 @@ int main()
 		// Activate shader
 		ourShader.Use();
 
+		glm::mat4 model, view, projection;
+		model = glm::rotate(model, -10.0f, glm::vec3(1.0f, 0.0f, 0.0f)); // rotate the object
+		view = glm::translate(view, glm::vec3(0.0f, 0.0f, -2.0f)); // move camera back a bit
+		projection = glm::perspective(45.0f, (GLfloat)WIDTH / (GLfloat)HEIGHT, 0.01f, 100.0f);
+
+		GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
+		GLint viewLoc = glGetUniformLocation(ourShader.Program, "view");
+		GLint projectionLoc = glGetUniformLocation(ourShader.Program, "projection");
+
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+
+		/*
 		glm::mat4 transform;
 		transform = glm::translate(transform, glm::vec3(0.5f *-cosf(glfwGetTime()), -0.5f*sinf(glfwGetTime()), 0.1f));
 		transform = glm::rotate(transform, (GLfloat)glfwGetTime() * 1.0f, glm::vec3(0.0f, 0.0f, 1.0f));
 
-
 		GLint transformLoc = glGetUniformLocation(ourShader.Program, "transform");
 		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+		*/
 
 		// Draw container
 		glBindVertexArray(VAO);
