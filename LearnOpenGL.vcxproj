@@ -142,8 +142,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LightingMain.cpp" />
     <ClCompile Include="src\Shader.cpp" />
-    <ClCompile Include="src\ShadersMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Camera.h" />
